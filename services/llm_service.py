@@ -10,7 +10,7 @@ client = OpenAI(
 def get_response(prompt: str):
 
     messages =[{"role": "system", "content": "You are a helpful AI tutor. Always explain step-by-step, simple, with examples."},
-                {"role": "system", "content": prompt}]
+                {"role": "user", "content": prompt}]
     
     try:
         respone = client.chat.completions.create(
